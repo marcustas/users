@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load customtags %}
+{% block 'content' %}
+<table>
+	{% for user in users %}
+	<tr>
+		<td >
+			<a href="/view/{{ user.id }}">{{ user.user }}</a>
+		</td>
+		<td>
+			{{ user.bdate|date:"m-d-Y" }}
+		</td>
+		<td>
+			{% allow user.bdate %}
+		</td>	
+		<td>
+			{{ user.random }}
+		</td>
+		<td>
+			{% bizzfuzz user.random%}
+		</td>
+		<td>
+			<a href="/delete/{{ user.id }}">
+				delete record
+			</a>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+<br>
+<a href="/add">Add user</a>
+{% endblock %}

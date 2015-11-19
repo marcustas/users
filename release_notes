@@ -1,0 +1,17 @@
+Done:
+- User model was extended with 2 fields (model CustomerUser): Date of birth and random integer field that is assigned a value from 1-100)
+- The first page is list of users.
+- Username linked to page with view of 1 user
+- Was added additional column with link to page for deleting users by pressing button and with redirecting to main page.
+- After list of users there is a link to page with form to add new user.
+
+Wasn't done:
+- Edit page
+- download to CSV file
+- Unit tests
+
+Comments:
+- Have possibilty to create only custom users, but not Django users.
+
+Installiation:
+- Before using project please create Django users from admin page

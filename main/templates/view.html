@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load customtags %}
+{% block 'content' %}
+<table>
+	<tr>
+		<td >
+			<a href="/view/{{ user.id }}">{{ user.user }}</a>
+		</td>
+		<td>
+			{{ user.bdate|date:"m-d-Y" }}
+		</td>
+		<td>
+			{% allow user.bdate %}
+		</td>	
+		<td>
+			{{ user.random }}
+		</td>
+		<td>
+			{% bizzfuzz user.random%}
+		</td>
+	</tr>
+</table>
+{% endblock %}
+

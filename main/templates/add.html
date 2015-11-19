@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load customtags %}
+{% block 'content' %}
+<form action="" method="post">
+	{% csrf_token %}
+	{{ form.as_ul }}
+	<button type="submit">
+		submit
+	</button>
+</form>
+{% endblock %}
+
